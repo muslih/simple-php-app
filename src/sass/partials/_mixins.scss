@@ -1,0 +1,25 @@
+@mixin main-box-shadow($n:5px){
+	@include border-radius($n);
+}
+
+@mixin main-transition($s:0.5s){
+	@include transition-duration($s);
+}
+
+@mixin main-font{
+	font-family: 'Armata', sans-serif;
+}
+
+@mixin tombol($bg:$mainColor,$col: #fff,$size:$mainFontSize){
+	@include main-transition;
+	background: $bg;
+	@include border-radius(5px);
+	color:$col;
+	font-size: $size;
+	padding: 10px;
+	border: 0px;
+
+	&:hover{
+		background: darken($bg,10%);
+	}
+}
